@@ -9,5 +9,5 @@ WORKDIR /workspace
 
 RUN pip install -U pytest
 
-CMD["feedback_pipeline.py"]
+CMD ["feedback_pipeline.py"]
 CMD ["pytest"]
