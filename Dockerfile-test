@@ -4,8 +4,10 @@ RUN dnf -y update fedora-gpg-keys && \
     dnf -y install python3-jinja2 python3-yaml python3-pip git && \
     dnf clean all 
     
-workdir /workspace
+COPY . /workspace    
+WORKDIR /workspace
 
 RUN pip install -U pytest
 
+CMD["feedback_pipeline.py"]
 CMD ["pytest"]
