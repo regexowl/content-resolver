@@ -1,9 +1,8 @@
 FROM registry.fedoraproject.org/fedora:33
 
 RUN dnf -y update fedora-gpg-keys && \
-    dnf -y install python3-jinja2 python3-yaml git && \
-    dnf clean all \
-    dnf install python3-pip
+    dnf -y install python3-jinja2 python3-yaml python3-pip git && \
+    dnf clean all 
     
 workdir /workspace
 
