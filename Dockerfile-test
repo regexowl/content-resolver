@@ -1,11 +1,10 @@
-from registry.fedoraproject.org/fedora:33
+FROM registry.fedoraproject.org/fedora:33
 
-run dnf -y update fedora-gpg-keys && \
+RUN dnf -y update fedora-gpg-keys && \
     dnf -y install python3-jinja2 python3-yaml git && \
-    dnf clean all 
+    dnf clean all \
+    pip install -U pytest
     
 workdir /workspace
 
-run pip install -U pytest
-
-run pytest
+CMD ["pytest"]
