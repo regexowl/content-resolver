@@ -19,6 +19,6 @@ jobs:
       run: docker build . --file Dockerfile-test --tag content-resolver-test:$(date +%s)
     - name: Troubleshoting
       run: docker images
-      #run: docker inspect
+      run: docker inspect content-resolver-test
     - name: Run tests
-      run: docker run content-resolver-test:local pytest
+      run: docker run content-resolver-test pytest
