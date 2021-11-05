@@ -17,5 +17,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile-test --tag content-resolver-test:$(date +%s)
+    - name: Troubleshoting
+      run: docker images
+      #run: docker inspect
     - name: Run tests
       run: docker run content-resolver-test:local pytest
