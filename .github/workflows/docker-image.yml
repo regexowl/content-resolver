@@ -20,6 +20,6 @@ jobs:
     - name: Show docker images
       run: docker images
     - name: Inspect the testing image
-      run: docker inspect content-resolver-test:latest
+      run: docker image inspect content-resolver-test
     - name: Run tests
       run: docker run content-resolver-test pytest
