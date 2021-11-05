@@ -18,4 +18,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile-test --tag content-resolver-test:$(date +%s)
     - name: Run tests
-      run: docker run content-resolver-test pytest
+      run: docker run content-resolver-test:local pytest
