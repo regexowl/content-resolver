@@ -28,6 +28,7 @@ Workloads consist of two parts:
 * Required Packages — defined by the user
 * Dependencies — resolved by Content Resolver
 
+
 Workloads are resolved on top of *Environments* which are meant to represent environments in which workloads would typically run — container base images, cloud images, or even desktop installations.
 
 Similar to workloads, environments consist of the same two parts:
