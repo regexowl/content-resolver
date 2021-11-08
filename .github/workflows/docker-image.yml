@@ -14,7 +14,7 @@ jobs:
       image: registry.fedoraproject.org/fedora:33
     steps:
     - name: Install git
-      run: dnf -y install git-core python3-yaml python3-jinja2
+      run: dnf -y install git-core python3-yaml python3-jinja2 python3-pytest python3-flake8
     
     - name: Checkout code
       uses: actions/checkout@v2
