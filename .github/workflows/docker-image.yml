@@ -11,7 +11,7 @@ jobs:
   setup_and_test:
     runs-on: ubuntu-latest
     container: 
-      image: registry.fedoraproject.org/fedora:35
+      image: quai.io/fedora/fedora:35-x86_64
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -23,9 +23,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-    
-    - name: Troubleshooting
-      run: docker ps
 
     - name: Install libraries
       run: dnf -y install python3-jinja2 python3-yaml git
