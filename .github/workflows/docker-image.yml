@@ -34,7 +34,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
     - name: Run the build
-      run: ./feedback_pipeline.py --dnf-cache-dir /dnf_cachedir test_configs output
+      run: ./feedback_pipeline.py test_configs output
     
     - name: Run tests
       run: |
