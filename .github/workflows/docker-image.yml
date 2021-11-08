@@ -19,6 +19,11 @@ jobs:
     - name: Update GPG keys
       run: dnf -y update fedora-gpg-keys
 
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
     - name: Install libraries
       run: dnf -y install python3-jinja2 python3-yaml git
     
