@@ -10,3 +10,4 @@ tmp
 data.json
 pkg_entries.json
 .DS_Store
+content-resolver-input/
