@@ -14,5 +14,3 @@ def test_build_completion():
 
 def test_get_configs():
     feedback_pipeline.get_configs(create_mock_settings())
-
-print(feedback_pipeline.get_configs(create_mock_settings()))
